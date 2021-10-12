@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/profile';
 
 function App() {
+  const style = { color: "red", textAlign : "center"}
+  const handleName=(fullName)=>{
+    alert(`The name of the profile user is ${fullName}`)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={style}>
+      <Profile fullName ="Yasser Aouina" bio="https://bio.com" profession="full stack JS developer" handleName={handleName} ><img src="/profilePhoto.jpg" /></Profile>
     </div>
   );
 }
